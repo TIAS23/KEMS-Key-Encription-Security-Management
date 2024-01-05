@@ -13,24 +13,21 @@ class GKunci extends Model
 
     protected $fillable = [
         'kuncis_id',
-        'generate_id',
-        'sentrals_id',
+        'id_kunci',
+        'id_sentral',
     ];
+    
     public function kunci()
     {
-        return $this->hasOne(Kunci::class,'id', 'id_kunci');
+        return $this->belongsTo(Kunci::class, 'id_kunci', 'id');
     }
     public function sentrals()
     {
-        return $this->belongsTo(Sentral::class, 'id');
+        return $this->belongsTo(Sentral::class, 'id_sentral', 'id');
     }
-    public function sentral()
-{
-    return $this->belongsTo(Sentral::class, 'id_sentral');
-}
 public function mitras()
     {
-        return $this->belongsTo(Mitra::class, 'mitra_id'); // Mengganti 'mitra_id' dengan mitra_id yang sesuai jika berbeda
+        return $this->belongsTo(Mitra::class, 'mitra_id');
     }
 
 }

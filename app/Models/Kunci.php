@@ -63,4 +63,8 @@ class Kunci extends Model
 {
     return $this->belongsTo(Mitra::class, 'mitra_id');
 }
+public function gkuncis()
+{
+    return $this->belongsTo(Mitra::class, 'kuncis_id');
+}
 }

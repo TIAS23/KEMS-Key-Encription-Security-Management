@@ -16,7 +16,13 @@
                         <i class="flaticon-right-arrow"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('gkuncis.index') }}">GKunci</a>
+                        <a href="{{ route('gkuncis.index') }}">Kunci</a>
+                    </li>
+                    <li class="separator">
+                        <i class="flaticon-right-arrow"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('gkuncis.edit_gkuncis', ['gkuncis' => $gkuncis]) }}">Edit Kunci</a>
                     </li>
                 </ul>
             </div>
@@ -24,18 +30,19 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Tambahkan Data </h4>
+                            <h4 class="card-title">Edit Data Kunci</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('gkuncis.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('gkuncis.update', ['gkuncis' => $gkuncis->id]) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                
+                                @method('PUT')
+
                                 <div class="form-group">
                                     <label for="id_sentral" class="font-weight-bold">Sentral</label>
                                     <select class="form-control @error('id_sentral') is-invalid @enderror" name="id_sentral" required>
                                         <option value="" selected disabled>Pilih Sentral</option>
                                         @foreach ($sentrals as $sentral)
-                                            <option value="{{ $sentral->id }}" {{ old('id') == $sentral->id ? 'selected' : '' }}>
+                                            <option value="{{ $sentral->id }}" {{ $gkuncis->id == $sentral->id ? 'selected' : '' }}>
                                                 {{ $sentral->SITE_ID }}
                                             </option>
                                         @endforeach
@@ -44,8 +51,9 @@
                                         <div class="invalid-feedback mt-2">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-                                <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                                
+                                <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+                                <a href="{{ route('gkuncis.index') }}" class="btn btn-md btn-danger">Batal</a>
                             </form>
                         </div>
                     </div>

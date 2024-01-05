@@ -69,10 +69,14 @@ Route::prefix('admin/engineer')->group(function () {
 
     Route::get('/gkuncis', [GKunciController::class, 'index'])->name('gkuncis.index');
     Route::get('/gkuncis/create', [GKunciController::class, 'create'])->name('gkuncis.create_gkuncis');
-    Route::post('gkuncis/store', [GKunciController::class, 'store'])->name('gkuncis.store');
+    Route::post('/gkuncis/store', [GKunciController::class, 'store'])->name('gkuncis.store');
+    Route::delete('/gkuncis/{id}', [GKunciController::class, 'destroy'])->name('gkuncis.destroy');
+    Route::get('/gkuncis/{gkuncis}/edit', [GKunciController::class, 'edit'])->name('gkuncis.edit_gkuncis');
+    Route::put('/gkuncis/{gkuncis}', [GKunciController::class, 'update'])->name('gkuncis.update');
+    Route::get('/gkuncis/generateCode/{gkuncis}', [KunciController::class, 'generateCodeGK'])->name('kuncis.generateCodeGK');
+    Route::put('/kuncis/update/{kunci}', [KunciController::class, 'update'])->name('kuncis.update');
 
-
-
+    Route::post('gkuncis/verify-code', [GKunciController::class, 'verifyCode'])->name('gkuncis.verifyCode');
 
 });
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Kunci;
+use App\Models\GKunci;
 use App\Models\Mitra; // Assuming you have a Mitra model
 use Illuminate\Http\Request;
 use App\Helpers\HelperFunctions;
@@ -82,6 +83,25 @@ class KunciController extends Controller
 
     // Tampilkan view dengan kode yang dihasilkan
     return view('admin.mitra.generateCode', ['mitra' => $mitra, 'generateCode' => $generateCode]);
+}
+
+public function generateCodeGK($gkunciId)
+{
+    $gkuncis = GKunci::find($gkunciId);
+
+    if (!$gkuncis) {
+        return response()->json(['error' => 'Kunci not found'], 404);
+    }
+
+    $generateCode = HelperFunctions::generateRandomNumber(4);
+
+    $kunci = new Kunci();
+
+    $kunci->generateCode = $generateCode;
+
+    $kunci->save();
+
+    return view('admin.engineer.generateCode', ['gkuncis' => $gkuncis, 'generateCodeGK' => $generateCode]);
 }
 
 
