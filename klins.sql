@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2024 at 10:45 AM
+-- Generation Time: Jan 05, 2024 at 08:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -90,115 +90,17 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `g_kuncis` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `kuncis_id` varchar(20) NOT NULL,
-  `generate_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `sentrals_id` bigint(20) UNSIGNED DEFAULT NULL
+  `id_kunci` bigint(20) UNSIGNED NOT NULL,
+  `id_sentral` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `g_kuncis`
 --
 
-INSERT INTO `g_kuncis` (`id`, `kuncis_id`, `generate_id`, `sentrals_id`) VALUES
-(1, 'KEY001', NULL, NULL),
-(2, 'KEY002', NULL, NULL),
-(3, 'KEY003', NULL, NULL),
-(4, 'KEY004', NULL, NULL),
-(5, 'KEY005', NULL, NULL),
-(6, 'KEY006', NULL, NULL),
-(7, 'KEY007', NULL, NULL),
-(8, 'KEY008', NULL, NULL),
-(9, 'KEY009', NULL, NULL),
-(10, 'KEY010', NULL, NULL),
-(11, 'KEY011', NULL, NULL),
-(12, 'KEY012', NULL, NULL),
-(13, 'KEY013', NULL, NULL),
-(14, 'KEY014', NULL, NULL),
-(15, 'KEY015', NULL, NULL),
-(16, 'KEY016', NULL, NULL),
-(17, 'KEY017', NULL, NULL),
-(18, 'KEY018', NULL, NULL),
-(19, 'KEY019', NULL, NULL),
-(20, 'KEY020', NULL, NULL),
-(21, 'KEY021', NULL, NULL),
-(22, 'KEY022', NULL, NULL),
-(23, 'KEY023', NULL, NULL),
-(24, 'KEY023', NULL, NULL),
-(25, 'KEY026', NULL, NULL),
-(26, 'KEY027', NULL, NULL),
-(27, 'KEY028', NULL, NULL),
-(28, 'KEY029', NULL, NULL),
-(29, 'KEY030', NULL, NULL),
-(30, 'KEY031', NULL, NULL),
-(31, 'KEY032', NULL, NULL),
-(32, 'KEY033', NULL, NULL),
-(33, 'KEY034', NULL, NULL),
-(34, 'KEY035', NULL, NULL),
-(35, 'KEY036', NULL, NULL),
-(36, 'KEY037', NULL, NULL),
-(37, 'KEY038', NULL, NULL),
-(38, 'KEY039', NULL, NULL),
-(39, 'KEY040', NULL, NULL),
-(40, 'KEY040', NULL, NULL),
-(41, 'KEY041', NULL, NULL),
-(42, 'KEY042', NULL, NULL),
-(43, 'KEY043', NULL, NULL),
-(44, 'KEY044', NULL, NULL),
-(45, 'KEY045', NULL, NULL),
-(46, 'KEY046', NULL, NULL),
-(47, 'KEY047', NULL, NULL),
-(48, 'KEY048', NULL, NULL),
-(49, 'KEY049', NULL, NULL),
-(50, 'KEY050', NULL, NULL),
-(51, 'KEY051', NULL, NULL),
-(52, 'KEY052', NULL, NULL),
-(53, 'KEY053', NULL, NULL),
-(54, 'KEY054', NULL, NULL),
-(55, 'KEY055', NULL, NULL),
-(56, 'KEY056', NULL, NULL),
-(57, 'KEY057', NULL, NULL),
-(58, 'KEY058', NULL, NULL),
-(59, 'KEY059', NULL, NULL),
-(60, 'KEY060', NULL, NULL),
-(61, 'KEY061', NULL, NULL),
-(62, 'KEY062', NULL, NULL),
-(63, 'KEY063', NULL, NULL),
-(64, 'KEY064', NULL, NULL),
-(65, 'KEY065', NULL, NULL),
-(66, 'KEY066', NULL, NULL),
-(67, 'KEY067', NULL, NULL),
-(68, 'KEY068', NULL, NULL),
-(69, 'KEY069', NULL, NULL),
-(70, 'KEY070', NULL, NULL),
-(71, 'KEY071', NULL, NULL),
-(72, 'KEY072', NULL, NULL),
-(73, 'KEY073', NULL, NULL),
-(74, 'KEY074', NULL, NULL),
-(75, 'KEY075', NULL, NULL),
-(76, 'KEY076', NULL, NULL),
-(77, 'KEY077', NULL, NULL),
-(78, 'KEY078', NULL, NULL),
-(79, 'KEY079', NULL, NULL),
-(80, 'KEY080', NULL, NULL),
-(81, 'KEY081', NULL, NULL),
-(82, 'KEY082', NULL, NULL),
-(83, 'KEY083', NULL, NULL),
-(84, 'KEY084', NULL, NULL),
-(85, 'KEY085', NULL, NULL),
-(86, 'KEY086', NULL, NULL),
-(87, 'KEY087', NULL, NULL),
-(88, 'KEY088', NULL, NULL),
-(89, 'KEY089', NULL, NULL),
-(90, 'KEY090', NULL, NULL),
-(91, 'KEY091', NULL, NULL),
-(92, 'KEY092', NULL, NULL),
-(93, 'KEY093', NULL, NULL),
-(94, 'KEY094', NULL, NULL),
-(95, 'KEY095', NULL, NULL),
-(96, 'KEY096', NULL, NULL),
-(97, 'KEY097', NULL, NULL),
-(98, 'KEY098', NULL, NULL),
-(99, 'KEY099', NULL, NULL),
-(100, 'KEY100', NULL, NULL);
+INSERT INTO `g_kuncis` (`id`, `kuncis_id`, `id_kunci`, `id_sentral`) VALUES
+(104, 'KEY-00001', 137, 1),
+(105, 'KEY-00002', 160, 3);
 
 -- --------------------------------------------------------
 
@@ -221,7 +123,32 @@ CREATE TABLE `kuncis` (
 --
 
 INSERT INTO `kuncis` (`id`, `generateCode`, `unique_code`, `id_sentral`, `image`, `created_at`, `updated_at`) VALUES
-(136, '4926', '1537', NULL, NULL, '2024-01-04 02:40:13', '2024-01-04 02:40:13');
+(136, '4926', '1537', NULL, NULL, '2024-01-04 02:40:13', '2024-01-04 02:40:13'),
+(137, '8609', '2499', NULL, NULL, '2024-01-04 19:45:43', '2024-01-04 19:45:43'),
+(138, '0994', '5510', NULL, NULL, '2024-01-04 21:00:30', '2024-01-04 21:00:30'),
+(139, '0336', '2219', NULL, NULL, '2024-01-04 21:01:27', '2024-01-04 21:01:27'),
+(140, '6820', '8008', NULL, NULL, '2024-01-04 21:01:59', '2024-01-04 21:01:59'),
+(141, '1132', '4107', NULL, NULL, '2024-01-04 21:02:11', '2024-01-04 21:02:11'),
+(142, '1848', '4319', NULL, NULL, '2024-01-04 21:02:19', '2024-01-04 21:02:19'),
+(143, '5145', '2142', NULL, NULL, '2024-01-04 21:06:43', '2024-01-04 21:06:43'),
+(144, '1614', '1938', NULL, NULL, '2024-01-04 21:06:53', '2024-01-04 21:06:53'),
+(145, '2004', '0947', NULL, NULL, '2024-01-04 21:12:42', '2024-01-04 21:12:42'),
+(146, '0175', '8640', NULL, NULL, '2024-01-04 21:12:48', '2024-01-04 21:12:48'),
+(147, '5403', '0595', NULL, NULL, '2024-01-04 21:14:29', '2024-01-04 21:14:29'),
+(148, '2598', '1821', NULL, NULL, '2024-01-04 21:14:39', '2024-01-04 21:14:39'),
+(149, '3941', '1984', NULL, NULL, '2024-01-04 21:15:23', '2024-01-04 21:15:23'),
+(150, '7281', '6535', NULL, NULL, '2024-01-04 21:15:31', '2024-01-04 21:15:31'),
+(151, '4214', '9764', NULL, NULL, '2024-01-04 21:16:53', '2024-01-04 21:16:53'),
+(152, '5932', '3877', NULL, NULL, '2024-01-04 21:17:04', '2024-01-04 21:17:04'),
+(153, '6882', '8176', NULL, NULL, '2024-01-04 21:18:02', '2024-01-04 21:18:02'),
+(154, '5479', '9443', NULL, NULL, '2024-01-04 21:18:25', '2024-01-04 21:18:25'),
+(155, '7742', '7385', NULL, NULL, '2024-01-04 21:18:38', '2024-01-04 21:18:38'),
+(156, '3091', '4316', NULL, NULL, '2024-01-04 21:18:56', '2024-01-04 21:18:56'),
+(157, '7039', '8266', NULL, NULL, '2024-01-04 21:20:46', '2024-01-04 21:20:46'),
+(158, '3980', '7346', NULL, NULL, '2024-01-04 21:21:05', '2024-01-04 21:21:05'),
+(159, '9815', '7851', NULL, NULL, '2024-01-04 21:29:16', '2024-01-04 21:29:16'),
+(160, '0475', '9067', NULL, NULL, '2024-01-04 21:31:34', '2024-01-04 21:31:34'),
+(161, '1995', '0249', NULL, NULL, '2024-01-04 21:32:21', '2024-01-04 21:32:21');
 
 -- --------------------------------------------------------
 
@@ -281,7 +208,7 @@ CREATE TABLE `mitras` (
 --
 
 INSERT INTO `mitras` (`id`, `id_kunci`, `kuncis_id`, `id_users`, `mitras_id`, `image`, `nama_perusahaan_mitra`, `nama_petugas`, `pekerjaan`, `id_sentral`, `created_at`, `updated_at`, `approve`) VALUES
-(40, 136, 100, 6, 'PNJ-00000', NULL, 'PT. ADISESHA PALLADIUM INTERCHANGE (APEX)', 'Coba', 'knjkbb', 1, '2024-01-04 02:40:13', '2024-01-04 02:40:13', 'pending');
+(41, 161, 104, 6, 'PNJ-00000', NULL, 'PT. ADISESHA PALLADIUM INTERCHANGE (APEX)', 'Coba', 'ncsdncds', 14, '2024-01-04 21:32:21', '2024-01-04 21:32:21', 'pending');
 
 -- --------------------------------------------------------
 
@@ -528,8 +455,8 @@ ALTER TABLE `failed_jobs`
 --
 ALTER TABLE `g_kuncis`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `g_kuncis_sentrals_id_foreign` (`sentrals_id`),
-  ADD KEY `g_kuncis_generate_id_foreign` (`generate_id`);
+  ADD KEY `fk_id_kunci_foreign` (`id_kunci`),
+  ADD KEY `fk_id_sentral_foreign` (`id_sentral`);
 
 --
 -- Indexes for table `kuncis`
@@ -624,13 +551,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `g_kuncis`
 --
 ALTER TABLE `g_kuncis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `kuncis`
 --
 ALTER TABLE `kuncis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -642,7 +569,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `mitras`
 --
 ALTER TABLE `mitras`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -689,8 +616,8 @@ ALTER TABLE `engineers`
 -- Constraints for table `g_kuncis`
 --
 ALTER TABLE `g_kuncis`
-  ADD CONSTRAINT `g_kuncis_generate_id_foreign` FOREIGN KEY (`generate_id`) REFERENCES `kuncis` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `g_kuncis_sentrals_id_foreign` FOREIGN KEY (`sentrals_id`) REFERENCES `sentrals` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `fk_id_kunci_foreign` FOREIGN KEY (`id_kunci`) REFERENCES `kuncis` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_id_sentral_foreign` FOREIGN KEY (`id_sentral`) REFERENCES `sentrals` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `kuncis`
