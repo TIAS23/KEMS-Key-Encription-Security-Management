@@ -192,7 +192,6 @@ public function edit($id)
             $kunciData = [
                 'id_kunci' => auth()->user()->mitra->id,
                 'generatedCode' => $generatedCode,
-                // Tambahkan kolom-kolom lain yang perlu disimpan
             ];
 
             // Sesuaikan dengan nama model dan kolom yang sesuai

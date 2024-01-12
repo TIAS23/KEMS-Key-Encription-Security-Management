@@ -23,7 +23,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">User Management</h4>
+                            <a href="{{ route('users.register') }}" class="btn btn-md btn-success mb-3">Tambahkan Data</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

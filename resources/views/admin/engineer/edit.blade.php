@@ -31,35 +31,78 @@
                                 @csrf
                 
                                 <div class="form-group">
-                                    <label for="city" class="font-weight-bold">City</label>
-                                    <input type="text" class="form-control @error('city') is-invalid @enderror"
-                                        name="city" value="{$sentral->city }}" placeholder="Masukkan Nama Kota">
-                                    @error('city')
+                                    <label for="CITY" class="font-weight-bold">City</label>
+                                    <input type="text" class="form-control @error('CITY') is-invalid @enderror"
+                                        name="CITY" value="{{$sentral->CITY }}" placeholder="Masukkan Nama Kota">
+                                    @error('CITY')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                     @enderror
                                 </div>
                 
                                 <div class="form-group">
-                                    <label for="site_id" class="font-weight-bold">Site ID</label>
-                                    <input type="text" class="form-control @error('site_id') is-invalid @enderror"
-                                        name="site_id" value="{{ $sentral->site_id }}" placeholder="Masukkan Nama Site ID">
-                                    @error('site_id')
+                                    <label for="SITE_ID" class="font-weight-bold">Site ID</label>
+                                    <input type="text" class="form-control @error('SITE_ID') is-invalid @enderror"
+                                        name="SITE_ID" value="{{$sentral->SITE_ID}}" placeholder="Masukkan Nama Site ID">
+                                    @error('SITE_ID')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                     @enderror
                                 </div>
                 
                                 <div class="form-group">
-                                    <label for="infra_sys_id" class="font-weight-bold">Infra SYS ID</label>
-                                    <input type="text" class="form-control" @error('infra_sys_id') is-invalid @enderror"
-                                        name="infra_sys_id" value="{{ $sentral->infra_sys_id }}" placeholder="Masukkan Infra SYS ID">                                    @error('infra_sys_id')
+                                    <label for="INFRA_SYS_ID" class="font-weight-bold">Infra SYS ID</label>
+                                    <input type="text" class="form-control" @error('INFRA_SYS_ID') is-invalid @enderror"
+                                        name="INFRA_SYS_ID" value="{{ $sentral->INFRA_SYS_ID }}" placeholder="Masukkan Infra SYS ID">                                    
+                                        @error('INFRA_SYS_ID')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="site_owner" class="font-weight-bold">Site Owner</label>
-                                    <input type="text" class="form-control" @error('site_owner') is-invalid @enderror"
-                                        name="site_owner" value="{{ $sentral->site_owner }}" placeholder="Masukkan Site Owner">                                    @error('site_owner')
+                                    <label for="SITE_OWNER_ID" class="font-weight-bold">Site Owner</label>
+                                    <input type="text" class="form-control" @error('SITE_OWNER_ID') is-invalid @enderror"
+                                        name="SITE_OWNER_ID" value="{{ $sentral->SITE_OWNER_ID }}" placeholder="Masukkan Site Owner">                                    
+                                        @error('SITE_OWNER_ID')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="INFRA_TYPE" class="font-weight-bold">Infra Type</label>
+                                    <input type="text" class="form-control" @error('INFRA_TYPE') is-invalid @enderror"
+                                        name="INFRA_TYPE" value="{{ $sentral->INFRA_TYPE }}" placeholder="Masukkan Infra Type">                                    
+                                        @error('INFRA_TYPE')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="INFRA_SUB_TYPE" class="font-weight-bold">Infra Sub Type</label>
+                                    <input type="text" class="form-control" @error('INFRA_SUB_TYPE') is-invalid @enderror"
+                                        name="INFRA_SUB_TYPE" value="{{ $sentral->INFRA_SUB_TYPE }}" placeholder="Masukkan Infra Sub Type">                                    
+                                        @error('INFRA_SUB_TYPE')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="ADDRESS" class="font-weight-bold">Addresss</label>
+                                    <input type="text" class="form-control" @error('ADDRESS') is-invalid @enderror"
+                                        name="ADDRESS" value="{{ $sentral->ADDRESS }}" placeholder="Masukkan Address">                                    
+                                        @error('ADDRESS')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="LATITUDE" class="font-weight-bold">Latitude</label>
+                                    <input type="text" class="form-control" @error('LATITUDE') is-invalid @enderror"
+                                        name="LATITUDE" value="{{ $sentral->LATITUDE }}" placeholder="Masukkan Latitude">                                    
+                                        @error('LATITUDE')
+                                        <div class="alert alert-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="LONGITUDE" class="font-weight-bold">Longitude</label>
+                                    <input type="text" class="form-control" @error('LONGITUDE') is-invalid @enderror"
+                                        name="LONGITUDE" value="{{ $sentral->LONGITUDE }}" placeholder="Masukkan Longitude">                                    
+                                        @error('LONGITUDE')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
                                     @enderror
                                 </div>

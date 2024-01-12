@@ -28,8 +28,7 @@ use App\Http\Controllers\CompanyDataController;
 Route::middleware(['guest'])->group(function () {
     Route::get('/', [SesiController::class, 'index'])->name('login');
     Route::post('/', [SesiController::class, 'login']);
-    Route::get('/register', [SesiController::class, 'showRegistrationForm'])->name('register');
-    Route::post('/register', [SesiController::class, 'register']);
+
 });
 
 Route::get('/home', function () {
@@ -77,6 +76,10 @@ Route::prefix('admin/engineer')->group(function () {
     Route::put('/kuncis/update/{kunci}', [KunciController::class, 'update'])->name('kuncis.update');
 
     Route::post('gkuncis/verify-code', [GKunciController::class, 'verifyCode'])->name('gkuncis.verifyCode');
+
+    Route::get('/tambahdata', [UserController::class, 'create'])->name('users.register');
+    Route::post('/tambahdata', [UserController::class, 'store'])->name('users.store');
+    Route::get('/users/{id}', [TransactionController::class, 'show'])->name('users.show');
 
 });
 
